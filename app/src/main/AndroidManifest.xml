@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.icynets.reminder2020">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,6 +23,10 @@
         </activity>
 
         <receiver android:name=".ReminderReceiver"/>
+
+        <meta-data
+            android:name="com.google.android.gio.API_KEY"
+            android:value="AIzaSyDg-kGL-CM7p5RRLoXvCxxwJbJzxJOP-rk" />
     </application>
 
 </manifest>
