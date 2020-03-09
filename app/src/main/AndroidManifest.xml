@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.icynets.reminder2020">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+
 
     <application
         android:allowBackup="true"
@@ -23,9 +27,10 @@
         </activity>
 
         <receiver android:name=".ReminderReceiver"/>
+        <receiver android:name=".GeofenceReceiver"/>
 
         <meta-data
-            android:name="com.google.android.gio.API_KEY"
+            android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDg-kGL-CM7p5RRLoXvCxxwJbJzxJOP-rk" />
     </application>
 
