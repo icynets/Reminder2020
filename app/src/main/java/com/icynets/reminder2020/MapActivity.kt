@@ -146,7 +146,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
             fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
                 if(location!=null){
-                    var latLong = LatLng(location.latitude,location.longitude)
+                    val latLong = LatLng(location.latitude,location.longitude)
                     with(gMap){
                         animateCamera(CameraUpdateFactory.newLatLngZoom(latLong,13f))
                     }
@@ -156,7 +156,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         else
         {
-            var permission = mutableListOf<String>()
+            val permission = mutableListOf<String>()
             permission.add(android.Manifest.permission.ACCESS_FINE_LOCATION)
             permission.add(android.Manifest.permission.ACCESS_COARSE_LOCATION)
 

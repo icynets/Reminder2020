@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Reminder2020</string>
+    <string name="reminder_text">Reminder Text</string>
+    <string name="create">Create</string>
 </resources>
